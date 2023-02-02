@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Resource
+
+export var data = {
+	\"GodotBot\": 'l',
+	\"DifferentBot\": 'BotStats.new(20) # A different one with 20 heal'
+}
+"
+
+[resource]
+script = SubResource( 1 )
+data = {
+"DifferentBot": "BotStats.new(20) # A different one with 20 heal",
+"GodotBot": "l"
+}

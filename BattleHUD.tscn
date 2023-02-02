@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BattleHUD.gd" type="Script" id=1]
+[ext_resource path="res://Battle_Text.tscn" type="PackedScene" id=2]
+
+[node name="BattleHUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 206.0
+margin_top = 468.0
+script = ExtResource( 1 )
+
+[node name="Moves" type="PopupMenu" parent="."]
+margin_left = 645.0
+margin_top = 475.0
+margin_right = 905.0
+margin_bottom = 531.0
+popup_exclusive = true
+hide_on_item_selection = false
+
+[node name="Battle_Text" parent="." instance=ExtResource( 2 )]
+margin_left = -86.0
+margin_top = 63.0
+margin_right = -86.0
+margin_bottom = 63.0
+
+[connection signal="index_pressed" from="Moves" to="." method="_on_Moves_index_pressed"]
